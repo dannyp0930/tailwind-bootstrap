@@ -6,6 +6,28 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0d6efd',
+                        dark: {
+                            '800': '#808080'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn-primary {
+                @apply bg-primary border border-primary text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7];
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -24,8 +46,8 @@
             <div class="flex flex-col pt-[18px] pb-3.5">
                 <div class="flex justify-between mb-4">
                     <span
-                        class="text-[#0470f7] bg-[#ccebfe] font-bold text-sm h-5 flex items-center px-2 rounded-[2.8px]">무료</span>
-                    <button class="stroke-[#808080]">
+                        class="text-primary bg-[#ccebfe] font-bold text-sm h-5 flex items-center px-2 rounded-[2.8px]">무료</span>
+                    <button class="stroke-dark-800">
                         <svg data-v-a9a45f84="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none">
                             <g data-v-a9a45f84="" id="Favorite">
@@ -45,14 +67,6 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-        @layer components {
-            .btn-primary {
-                @apply bg-[#0d6efd] border border-[#0d6efd] text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7];
-            }
-        }
-    </style>
 </body>
 
 </html>
