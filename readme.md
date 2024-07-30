@@ -1,7 +1,6 @@
 # Tailwind CSS: Utility-First
 
 
-
 ## 목차
 
 - [Tailwind CSS 개요](#Tailwind-CSS-개요)
@@ -9,7 +8,6 @@
 - [Tailwind CSS VS Bootstrap](#Tailwind-CSS-VS-Bootstrap)
 - [결론](#결론)
 - [참조](#참조)
-
 
 
 ## Tailwind CSS 개요
@@ -24,7 +22,6 @@ Tailwind CSS의 가장 중요하다고 할 수 있는 컨셉은 Utility First �
 - 직관성: 클래스 이름이 스타일의 기능을 나타내 코드를 읽고 이해하기 용이
 
 
-
 ## Tailwind CSS 특징
 
 ### 디자인 자유도
@@ -36,21 +33,9 @@ Utility First의 장점을 활용한 자유로운 디자인 가능하다.
 ```
 
 
-
 ### 빠른 스타일링
 
 별도의 CSS파일을 필요로 하지 않아 빠른 스타일링 가능
-
-
-
-### 빠른 반응형 디자인
-
-반응형 클래스(sm:, md:, lg:, xl:)릍 통한 반응형 디자인 구현
-
-```html
-<button class="bg-[#0d6efd] border border-[#0d6efd] text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7] sm:text-xl lg:text-sm">Tailwind</button>
-```
-
 
 
 ### 재사용 디자인
@@ -71,6 +56,23 @@ Utility First의 장점을 활용한 자유로운 디자인 가능하다.
 <button class="btn-primary">Tailwind</button>
 ```
 
+
+### 빠른 반응형 디자인
+
+반응형 클래스(sm:, md:, lg:, xl:, 2xl:)릍 통한 반응형 디자인 구현
+- sm :640px
+- md : 768px
+- lg : 1024px
+- xl : 1280px
+- 2xl : 1536px
+
+```html
+<button class="btn-primary text-4xl sm:text-3xl md:text-2xl lg:text-xl">Tailwind</button>
+```
+
+
+### 모바일 퍼스트
+반응형 클래스가 모바일 퍼스트 기준으로 구현
 
 
 ###  커스터마이즈
@@ -111,11 +113,9 @@ module.exports = {
 ```
 
 
-
 ### 불필요한 CSS 제거
 
 JIT(Just-In-Time)엔진으로 코드에서 사용되는 CSS만 생성한 최적화가 가능하다.
-
 
 
 ## Tailwind CSS VS Bootstrap
@@ -133,14 +133,17 @@ JIT(Just-In-Time)엔진으로 코드에서 사용되는 CSS만 생성한 최적�
 - 기본 CSS와 JS 파일이 함께 제공되며, 사용하지 않는 컴포넌트 포함될 가능성 존재
 
 
-
 ## 결론
 
 Tailwind CSS가 비교적 최근에 나온 유틸이기도 하고 커스터마이징과 최적화 부분에서 더 좋은 측면이 있어
 
 Tailwind CSS를 사용하는 것이 유리!!!
 
+다만 유틸리티 클래스의 종류가 많아 러닝커브가 높아 익숙해지는데 시간이 필요
 
+간단한 서비스를 디자인 상관없이 빠른 개발을 원한다면 Boostrap
+
+통일된 자신만의 디자인 시스템과 커스터마이징이 필수라면 Tailwind
 
 ## 참조
 
