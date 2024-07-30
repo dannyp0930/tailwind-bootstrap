@@ -12,7 +12,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         .card-container {
-            width: 288px;
+            width: 290px;
             transition-duration: 300ms;
         }
 
@@ -24,12 +24,27 @@
             box-shadow: 0 10px 10px -5px #0000000a, 0 20px 25px -5px #0000001a;
         }
 
+        .image-wrap {
+            border: 1px
+             solid rgba(17,17,17,.1) 
+        }
+
+        .text-container {
+            padding-top: 18px;
+            padding-bottom: 14px;
+        }
+
         .badge {
+            padding: 0 8px;
             height: 20px;
+            background-color: #ccebfe;
+            border-radius: 2.8px;
         }
 
         .text-wrap {
             height: 40px;
+            margin-bottom: 6px;
+            line-height: 1.25rem;
         }
 
         .text-wrap:hover {
@@ -38,6 +53,7 @@
 
         .date-wrap {
             font-size: 14px;
+            line-height: 18px;
         }
     </style>
     <title>Bootstrap</title>
@@ -52,10 +68,10 @@
             <a class="image-wrap d-block w-100 ratio ratio-1x1" href="/">
                 <img class="w-full h-full" />
             </a>
-            <div class="d-flex flex-column pt-4 pb-3">
+            <div class="text-container d-flex flex-column">
                 <div class="d-flex justify-content-between mb-3">
-                    <span class="badge text-primary bg-primary-subtle fw-bold rounded-1">무료</span>
-                    <button class="btn p-0">
+                    <span class="badge d-flex align-items-center text-primary fw-bold">무료</span>
+                    <button class="btn m-0 p-0 border-0">
                         <svg data-v-a9a45f84="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             stroke="#808080" viewBox="0 0 24 24" fill="none">
                             <g data-v-a9a45f84="" id="Favorite">
@@ -66,7 +82,7 @@
                         </svg>
                     </button>
                 </div>
-                <a class="text-wrap mb-2 text-decoration-none text-body" href="/">
+                <a class="text-wrap text-decoration-none text-body" href="/">
                     모바일기술대상
                 </a>
                 <a class="date-wrap text-decoration-none text-body-secondary" href="/">
