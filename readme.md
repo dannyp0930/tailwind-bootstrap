@@ -26,16 +26,12 @@ Tailwind CSS의 가장 중요하다고 할 수 있는 컨셉은 Utility First �
 
 ### 디자인 자유도
 
-Utility First의 장점을 활용한 자유로운 디자인 가능하다.
-
 ```html
 <button class="bg-[#0d6efd] border border-[#0d6efd] text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7]">Tailwind</button>
 ```
 
-
-### 빠른 스타일링
-
-별도의 CSS파일을 필요로 하지 않아 빠른 스타일링 가능
+- Utility First의 장점을 활용한 자유로운 디자인 가능
+- 별도의 CSS파일을 필요로 하지 않아 빠른 스타일링 가능
 
 
 ### 재사용 디자인
@@ -46,33 +42,36 @@ Utility First의 장점을 활용한 자유로운 디자인 가능하다.
 @tailwind utilities;
 
 @layer components {
+  .btn {
+      @apply border py-[0.375rem] px-3 leading-normal rounded-md ;
+  }
   .btn-primary {
-    @apply bg-[#0d6efd] border border-[#0d6efd] text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7];
+      @apply bg-[#0d6efd] border-[#0d6efd] text-white hover:bg-[#0b5ed7];
   }
 }
 ```
 
 ```html
-<button class="btn-primary">Tailwind</button>
+<button class="btn btn-primary">Tailwind</button>
 ```
 
+- base: reset이나 default 스타일과 같이 전체 HTML에 적용할 경우
+- components: 유틸리티로 재정의 하는 클래스 기반의 스타일
+- utilities: 단일한 목적으로 사용하는 클래스, 다른 스타일보다 우선
 
-### 빠른 반응형 디자인
 
-반응형 클래스(sm:, md:, lg:, xl:, 2xl:)릍 통한 반응형 디자인 구현
-- sm :640px
-- md : 768px
-- lg : 1024px
-- xl : 1280px
-- 2xl : 1536px
+### 반응형 디자인
+
+반응형 클래스:Mobile First(sm:, md:, lg:, xl:, 2xl:)릍 통한 반응형 디자인 구현
+- sm: 640px
+- md: 768px
+- lg: 1024px
+- xl: 1280px
+- 2xl: 1536px
 
 ```html
 <button class="btn-primary text-4xl sm:text-3xl md:text-2xl lg:text-xl">Tailwind</button>
 ```
-
-
-### 모바일 퍼스트
-반응형 클래스가 모바일 퍼스트 기준으로 구현
 
 
 ###  커스터마이즈
@@ -125,25 +124,26 @@ JIT(Just-In-Time)엔진으로 코드에서 사용되는 CSS만 생성한 최적�
 - 유틸리티 클래스 기반으로 세밀한 스타일 조정 가능
 - `tailwind.config.js` 파일을 통해 자유롭게 커스터마이즈
 - JIT엔진이 CSS 자동 최적화
+- 높은 러닝 커브
 
 ### Bootstrap
 
 - 미리 정의된 컴포넌트와 디자인 시스템 제공
-- SASS 변수와 커스터마이징 가능하지만 기본 스타일에 제한적
+- SASS 변수 등 으로 커스터마이징 가능하지만 기본 스타일에 제한적
 - 기본 CSS와 JS 파일이 함께 제공되며, 사용하지 않는 컴포넌트 포함될 가능성 존재
+- 낮은 러닝커브
 
 
 ## 결론
 
-Tailwind CSS가 비교적 최근에 나온 유틸이기도 하고 커스터마이징과 최적화 부분에서 더 좋은 측면이 있어
+- Tailwind CSS
+  - 다양한 커스터마이징 필요할 때
+  - 최적화를 우선시 할 때
 
-Tailwind CSS를 사용하는 것이 유리!!!
+- Bootstrap
+  - 간단한 컴포넌트들로 빠른 개발이 필요 할 때
+  - 특별한 디자인이 필요 없는 경우
 
-다만 유틸리티 클래스의 종류가 많아 러닝커브가 높아 익숙해지는데 시간이 필요
-
-간단한 서비스를 디자인 상관없이 빠른 개발을 원한다면 Boostrap
-
-통일된 자신만의 디자인 시스템과 커스터마이징이 필수라면 Tailwind
 
 ## 참조
 

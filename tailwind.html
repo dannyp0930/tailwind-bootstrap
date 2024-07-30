@@ -29,8 +29,11 @@
     </script>
     <style type="text/tailwindcss">
         @layer components {
+            .btn {
+                @apply border py-[0.375rem] px-3 leading-normal rounded-md ;
+            }
             .btn-primary {
-                @apply bg-[#0d6efd] border border-[#0d6efd] text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7];
+                @apply bg-[#0d6efd] border-[#0d6efd] text-white hover:bg-[#0b5ed7];
             }
         }
     </style>
@@ -39,11 +42,11 @@
 <body>
     <div class="flex justify-center p-4 gap-4">
         <button class="bg-[#0d6efd] border border-[#0d6efd] text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7]">Tailwind</button>
-        <button class="btn-primary">Tailwind</button>
-        <button class="btn-primary text-4xl sm:text-3xl md:text-2xl lg:text-xl">Tailwind</button>
+        <button class="btn btn-primary">Tailwind</button>
+        <button class="btn btn-primary text-4xl sm:text-3xl md:text-2xl lg:text-xl">Tailwind</button>
     </div>
     <div class="flex justify-center p-4 gap-4">
-        <div class="group w-[290px] hover:-translate-y-2.5 duration-300">
+        <div class="group w-[290px] hover:-translate-y-2.5 duration-300 transition-transform">
             <a class="block w-full aspect-square group-hover:shadow-3xl" href="/">
                 <img class="w-full h-full border border-border-gray" src="./image.png" />
             </a>
