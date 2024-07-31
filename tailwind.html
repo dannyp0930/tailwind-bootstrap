@@ -7,55 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tailwind CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0d6efd',
-                        dark: {
-                            '80': '#808080'
-                        },
-                        border: {
-                            gray: '#1111111a'
-                        }
-                    },
-                    boxShadow: {
-                        '3xl': '0 10px 10px -5px #0000000a, 0 20px 25px -5px #0000001a',
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer components {
-            .btn {
-                @apply border py-[0.375rem] px-3 leading-normal rounded-md ;
-            }
-            .btn-primary {
-                @apply bg-[#0d6efd] border-[#0d6efd] text-white hover:bg-[#0b5ed7];
-            }
-        }
-    </style>
 </head>
 
 <body>
     <div class="flex justify-center p-4 gap-4">
-        <button class="bg-[#0d6efd] border border-[#0d6efd] text-white py-[0.375rem] px-3 leading-normal rounded-md hover:bg-[#0b5ed7]">Tailwind</button>
-        <button class="btn btn-primary">Tailwind</button>
-        <button class="btn btn-primary text-4xl sm:text-3xl md:text-2xl lg:text-xl">Tailwind</button>
-    </div>
-    <div class="flex justify-center p-4 gap-4">
         <div class="group w-[290px] hover:-translate-y-2.5 duration-300 transition-transform">
-            <a class="block w-full aspect-square group-hover:shadow-3xl" href="/">
-                <img class="w-full h-full border border-border-gray" src="./image.png" />
+            <a class="block w-full aspect-square group-hover:shadow-[0_10px_10px_-5px_#0000000a,_0_20px_25px_-5px_#0000001a]" href="/">
+                <img class="w-full h-full border border-[#1111111a]" src="./image.png" />
             </a>
             <div class="flex flex-col pt-[18px] pb-3.5">
                 <div class="flex justify-between mb-4">
                     <div>
-                        <span class="text-primary bg-[#ccebfe] font-bold text-[12px] h-5 flex items-center px-2 rounded-[2.8px]">무료</span>
+                        <span class="text-[#0d6efd] bg-[#ccebfe] font-bold text-[12px] h-5 flex items-center px-2 rounded-[2.8px]">무료</span>
                     </div>
-                    <button class="stroke-dark-80">
+                    <button class="stroke-[#808080]">
                         <svg data-v-a9a45f84="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none">
                             <g data-v-a9a45f84="" id="Favorite">
